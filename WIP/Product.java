@@ -37,9 +37,10 @@ public abstract class Product {
 	
 	//toString
 	@Override
-	public String toString() {
-		return this.getClass().getName() + '@' + Integer.toHexString((int) getPrice());
-	}
+    public String toString(){
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity();
+    }
+
 	
 	//boolean
 	private boolean sellOne(double price) {

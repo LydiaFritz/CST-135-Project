@@ -31,16 +31,13 @@ public abstract class Dispenser {
 	
 	//CHANGE PRICE WOULDNT I NEED TO EMPLEMENT double newPrice()?
 	public void changePrice(Product prod, double price) {
-		for(int i = 0; i < items.length; i++) {
-			products.change(price, prod);
-    	}
-		return;
+			prod.price = price;
 	}
 	
 	//ADD ITEMS
 	public void addStock(Product prod, int numToAdd) {
 		for(int i = 0; i < items.length; i++) {
-			products.add(numToAdd, prod);
+			prod.add(numToAdd);
     	}
 		return;
 	}
@@ -55,9 +52,13 @@ public abstract class Dispenser {
 	
 	//ITS SAYING ITS UNDEFINED, DO I ADD IT AS A STRING?
 	public int findProduct(Product prod) {
-		if (Product.getName().contains(""));
+		if (prod.getName().contains(""));
 		return CAPACITY;
 	}
 	
+	@Override
+    public String toString(){
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity();
+    }
 
 }
