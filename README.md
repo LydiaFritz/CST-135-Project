@@ -4,10 +4,6 @@ A shared repository for the CST-135 Milestones and Final Project
 This project will provide a simple vending machine program written in Java that can handle Chips, Candy, Gum, and Drinks. Each of those items can be tracked by individual classes or by more detailed information such as Flavor, Name, Price, and Quantity. The program as a proof of concept can be run in the Eclipse IDE.
 
 
-
-
-One Paragraph of project description goes here
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
