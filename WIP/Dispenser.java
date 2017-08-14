@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Dispenser {
 	
@@ -13,6 +14,7 @@ public abstract class Dispenser {
 	Dispenser() {
 	}
 
+	//ADD PRODUCT
 	boolean addProduct(Product prod) {
 		for(int i = 0; i < items.length; i++) {
 			products.add(prod);
@@ -21,6 +23,7 @@ public abstract class Dispenser {
 		
 	}
 	
+	//REMOVE PRODUCT
 	boolean removeProduct(Product prod) {
 		for(int i = 0; i < items.length; i++) {
 			products.remove(prod);
@@ -29,7 +32,7 @@ public abstract class Dispenser {
 
 	}
 	
-	//CHANGE PRICE WOULDNT I NEED TO EMPLEMENT double newPrice()?
+	//CHANGE PRICE 
 	public void changePrice(Product prod, double price) {
 			prod.price = price;
 	}
@@ -37,11 +40,11 @@ public abstract class Dispenser {
 	//ADD ITEMS
 	public void addStock(Product prod, int numToAdd) {
 		for(int i = 0; i < items.length; i++) {
-			prod.add(numToAdd);
+			((List<Product>) prod).add(numToAdd, prod);
     	}
 		return;
 	}
-	
+
 	//ITEMS IN AN ARRAY
 	public void displayProducts() {
     	for(int i = 0; i < items.length; i++) {
@@ -50,15 +53,16 @@ public abstract class Dispenser {
     	return;
 	}
 	
-	//ITS SAYING ITS UNDEFINED, DO I ADD IT AS A STRING?
+	//FIND PRODUCTS
 	public int findProduct(Product prod) {
 		if (prod.getName().contains(""));
 		return CAPACITY;
 	}
 	
-	@Override
+	//toString()
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity();
+    	return "Name: " + products.getClass().getName() + ":\n" + products.toString() + "\n\n";
+    	
     }
 
 }
