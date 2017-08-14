@@ -1,3 +1,5 @@
+//SEE MY COMMENTS IN DRINK - THIS FILE HAS THE SAME ISSUES
+
 package application;
 
 public abstract class Snack extends Product{
@@ -27,6 +29,7 @@ public abstract class Snack extends Product{
 		this.width = snack.width;
 	}
 	
+	//NONE OF THESE SHOULD BE ABSTRACT IF THEY BEHAVE THE SAME IN ALL SUBCLASSES
 	abstract double getHeight();
 	
 	abstract void setHeight(double height);
