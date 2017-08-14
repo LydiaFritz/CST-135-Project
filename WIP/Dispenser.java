@@ -3,7 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Dispenser {
+public class Dispenser {
 	
 	private ArrayList<Product> products;
 
@@ -17,7 +17,7 @@ public abstract class Dispenser {
 	//ADD PRODUCT
 	boolean addProduct(Product prod) {
 		for(int i = 0; i < items.length; i++) {
-			products.add(prod);
+			((List<Product>) prod).add(prod);
     	}
 		return false;
 		
@@ -26,7 +26,7 @@ public abstract class Dispenser {
 	//REMOVE PRODUCT
 	boolean removeProduct(Product prod) {
 		for(int i = 0; i < items.length; i++) {
-			products.remove(prod);
+			((List<Product>) prod).remove(prod);
     	}
 		return false;
 
@@ -46,9 +46,9 @@ public abstract class Dispenser {
 	}
 
 	//ITEMS IN AN ARRAY
-	public void displayProducts() {
+	public void displayProducts(Product prod) {
     	for(int i = 0; i < items.length; i++) {
-    		products.get(i).toString();
+    		((List<Product>) prod).get(i).toString();
     	}
     	return;
 	}
