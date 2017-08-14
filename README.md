@@ -35,8 +35,6 @@ Instructions for running the program:
 
 ## Authors
 
-Stephan Foster, Caleb Miller, Alexander Verdi
-
 * **Stephan Foster**
 * **Caleb Miller**
 * **Alexander Verdi**
