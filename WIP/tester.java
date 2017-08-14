@@ -6,6 +6,7 @@ public class tester {
 		printTest(new Candy());
 		printTest(new Chips());
 		printTest(new Gum());
+		printTest(new Drink());
 
 	}
 	public static void printTest(Product prod) {
