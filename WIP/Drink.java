@@ -2,8 +2,8 @@ package application;
 
 public class Drink extends Product {
 
-	String Brand;
-	String Flavor;
+	String brand;
+	String flavor;
 	
 	Drink() {
 	}
@@ -12,8 +12,8 @@ public class Drink extends Product {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
-		this.Brand = brand;
-		this.Flavor = flavor;
+		this.brand = brand;
+		this.flavor = flavor;
 	}
 	
 	Drink(Product prod) {
@@ -26,8 +26,8 @@ public class Drink extends Product {
 		this.name = drink.name;
 		this.price = drink.price;
 		this.quantity = drink.quantity;
-		this.Brand = drink.Brand;
-		this.Flavor = drink.Flavor;
+		this.brand = drink.brand;
+		this.flavor = drink.flavor;
 	}
 
 	String getName() {
@@ -55,24 +55,24 @@ public class Drink extends Product {
 	}
 	
 	public String getBrand() {
-		return this.Brand;
+		return this.brand;
 	}
 	
 	public void setBrand(String Brand) {
-		this.Brand = Brand;
+		this.brand = Brand;
 	}
 	
 	public String getFlavor() {
-		return this.Flavor;
+		return this.flavor;
 	}
 	
 	public void setFlavor(String Flavor) {
-		this.Flavor = Flavor;
+		this.flavor = Flavor;
 	}
 
 	@Override
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: ";
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nBrand: " + this.getBrand() + "\nFlavor: " + this.getFlavor();
     	
     }
 
