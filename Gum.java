@@ -8,6 +8,7 @@ public class Gum extends Snack{
 	Gum(){
 	}
 
+	//USE SUPER TO INITIALIZE BASE CLASS PART
 	Gum(String name, double price, double height, double weight, double width, String brand, String flavor, int pieces){
 		this.name = name;
 		this.price = price;
@@ -24,6 +25,7 @@ public class Gum extends Snack{
 		this.price = prod.price;
 	}
 	
+	//USE SUPER TO INITIALIZE BASE CLASS PART
 	Gum(Snack snack) {
 		this.name = snack.name;
 		this.price = snack.price;
@@ -32,6 +34,7 @@ public class Gum extends Snack{
 		this.width = snack.width;
 	}	
 	
+	//USE SUPER TO INITIALIZE BASE CLASS PART
 	Gum(Gum gum) {
 		this.name = gum.name;
 		this.price = gum.price;
@@ -43,6 +46,7 @@ public class Gum extends Snack{
 		this.pieces = gum.pieces;
 	}
 
+	//MOST OF THESE SHOULD BE CODED IN THE BASE CLASS
 	String getName() {
 		return this.name;
 	}
