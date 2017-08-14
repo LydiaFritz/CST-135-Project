@@ -6,10 +6,9 @@ public abstract class Snack extends Product{
 	Snack(){
 	}
 
-	Snack(String name, double price, int quantity, double height, double weight, double width){
+	Snack(String name, double price, double height, double weight, double width){
 		this.name = name;
 		this.price = price;
-		this.quantity = quantity;
 		this.height = height;
 		this.weight = weight;
 		this.width = width;
@@ -18,13 +17,11 @@ public abstract class Snack extends Product{
 	Snack(Product prod) {
 		this.name = prod.name;
 		this.price = prod.price;
-		this.quantity = prod.quantity;
 	}
 	
 	Snack(Snack snack) {
 		this.name = snack.name;
 		this.price = snack.price;
-		this.quantity = snack.quantity;
 		this.height = snack.height;
 		this.weight = snack.weight;
 		this.width = snack.width;
@@ -44,6 +41,6 @@ public abstract class Snack extends Product{
 		
     @Override
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth();
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth();
     }
 }
