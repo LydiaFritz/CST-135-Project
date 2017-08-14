@@ -6,7 +6,8 @@ This project will provide a simple vending machine program written in Java that 
 ## Getting Started
 
 ```
-Please make sure you have the latest version of the Eclipse Oxygen for Java Developers IDE installed before attempting to run the program.
+Please make sure you have the latest version of the Eclipse Oxygen for Java Developers IDE 
+installed before attempting to run the program.
 ```
 
 ### Prerequisites
