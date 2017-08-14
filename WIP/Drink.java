@@ -4,15 +4,16 @@ public class Drink extends Product {
 
 	String Brand;
 	String Flavor;
-	Int Quantity;
 	
 	Drink() {
 	}
 	
-	Drink(String name, String type, double price, int quantity) {
+	Drink(String name, double price, int quantity, String brand, String flavor) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
+		this.Brand = brand;
+		this.Flavor = flavor;
 	}
 	
 	Drink(Product prod) {
@@ -22,15 +23,42 @@ public class Drink extends Product {
 	}
 	
 	Drink(Drink drink) {
+		this.name = drink.name;
+		this.price = drink.price;
+		this.quantity = drink.quantity;
 		this.Brand = drink.Brand;
 		this.Flavor = drink.Flavor;
+	}
+
+	String getName() {
+		return this.name;
+	}
+
+	void setName(String name) {
+		this.name = name;
+	}
+
+	double getPrice() {
+		return this.price;
+	}
+
+	void setPrice(double price) {
+		this.price = price;
+	}
+
+	int getQuantity() {
+		return this.quantity;
+	}
+
+	void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 	
 	public String getBrand() {
 		return this.Brand;
 	}
 	
-	public void setBrand() {
+	public void setBrand(String Brand) {
 		this.Brand = Brand;
 	}
 	
@@ -38,7 +66,7 @@ public class Drink extends Product {
 		return this.Flavor;
 	}
 	
-	public void setFlavor() {
+	public void setFlavor(String Flavor) {
 		this.Flavor = Flavor;
 	}
 
