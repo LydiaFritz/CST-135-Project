@@ -15,6 +15,7 @@ public abstract class Product {
 		this.quantity = quantity;
 	}
 	
+	//Overload
 	Product(Product prod) {
 		this.name = prod.name;
 		this.price = prod.price;
