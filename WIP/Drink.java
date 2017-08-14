@@ -8,10 +8,9 @@ public class Drink extends Product {
 	Drink() {
 	}
 	
-	Drink(String name, double price, int quantity, String brand, String flavor) {
+	Drink(String name, double price, String brand, String flavor) {
 		this.name = name;
 		this.price = price;
-		this.quantity = quantity;
 		this.brand = brand;
 		this.flavor = flavor;
 	}
@@ -19,13 +18,11 @@ public class Drink extends Product {
 	Drink(Product prod) {
 		this.name = prod.name;
 		this.price = prod.price;
-		this.quantity = prod.quantity;
 	}
 	
 	Drink(Drink drink) {
 		this.name = drink.name;
 		this.price = drink.price;
-		this.quantity = drink.quantity;
 		this.brand = drink.brand;
 		this.flavor = drink.flavor;
 	}
@@ -44,14 +41,6 @@ public class Drink extends Product {
 
 	void setPrice(double price) {
 		this.price = price;
-	}
-
-	int getQuantity() {
-		return this.quantity;
-	}
-
-	void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 	
 	public String getBrand() {
@@ -72,7 +61,7 @@ public class Drink extends Product {
 
 	@Override
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nBrand: " + this.getBrand() + "\nFlavor: " + this.getFlavor();
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nBrand: " + this.getBrand() + "\nFlavor: " + this.getFlavor();
     	
     }
 

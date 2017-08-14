@@ -7,10 +7,9 @@ public class Candy extends Snack{
 	Candy(){
 	}
 
-	Candy(String name, double price, int quantity, double height, double weight, double width, String brand, String type){
+	Candy(String name, double price, double height, double weight, double width, String brand, String type){
 		this.name = name;
 		this.price = price;
-		this.quantity = quantity;
 		this.height = height;
 		this.weight = weight;
 		this.width = width;
@@ -21,13 +20,11 @@ public class Candy extends Snack{
 	Candy(Product prod) {
 		this.name = prod.name;
 		this.price = prod.price;
-		this.quantity = prod.quantity;
 	}
 	
 	Candy(Snack snack) {
 		this.name = snack.name;
 		this.price = snack.price;
-		this.quantity = snack.quantity;
 		this.height = snack.height;
 		this.weight = snack.weight;
 		this.width = snack.width;
@@ -36,7 +33,6 @@ public class Candy extends Snack{
 	Candy(Candy candy) {
 		this.name = candy.name;
 		this.price = candy.price;
-		this.quantity = candy.quantity;
 		this.height = candy.height;
 		this.weight = candy.weight;
 		this.width = candy.width;	
@@ -76,14 +72,6 @@ public class Candy extends Snack{
 	void setPrice(double price) {
 		this.price = price;
 	}
-
-	int getQuantity() {
-		return this.quantity;
-	}
-
-	void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
 	
 	String getType(){
 		return this.type;
@@ -111,7 +99,7 @@ public class Candy extends Snack{
 
     @Override
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth() + "\nBrand: " + this.brand + "\nType: " + this.type;
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth() + "\nBrand: " + this.brand + "\nType: " + this.type;
     }
 
 }

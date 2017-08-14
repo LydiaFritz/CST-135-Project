@@ -8,10 +8,9 @@ public class Gum extends Snack{
 	Gum(){
 	}
 
-	Gum(String name, double price, int quantity, double height, double weight, double width, String brand, String flavor, int pieces){
+	Gum(String name, double price, double height, double weight, double width, String brand, String flavor, int pieces){
 		this.name = name;
 		this.price = price;
-		this.quantity = quantity;
 		this.height = height;
 		this.weight = weight;
 		this.width = width;
@@ -23,13 +22,11 @@ public class Gum extends Snack{
 	Gum(Product prod) {
 		this.name = prod.name;
 		this.price = prod.price;
-		this.quantity = prod.quantity;
 	}
 	
 	Gum(Snack snack) {
 		this.name = snack.name;
 		this.price = snack.price;
-		this.quantity = snack.quantity;
 		this.height = snack.height;
 		this.weight = snack.weight;
 		this.width = snack.width;
@@ -38,7 +35,6 @@ public class Gum extends Snack{
 	Gum(Gum gum) {
 		this.name = gum.name;
 		this.price = gum.price;
-		this.quantity = gum.quantity;
 		this.height = gum.height;
 		this.weight = gum.weight;
 		this.width = gum.width;	
@@ -61,14 +57,6 @@ public class Gum extends Snack{
 
 	void setPrice(double price) {
 		this.price = price;
-	}
-
-	int getQuantity() {
-		return this.quantity;
-	}
-
-	void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 	
 	double getHeight() {
@@ -121,7 +109,7 @@ public class Gum extends Snack{
 	
     @Override
     public String toString(){
-    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth() + "\nBrand: " + this.brand + "\nFlavor: " + this.flavor + "\nPieces: " + this.pieces;
+    	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth() + "\nBrand: " + this.brand + "\nFlavor: " + this.flavor + "\nPieces: " + this.pieces;
     }
 
 }
