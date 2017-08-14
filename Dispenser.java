@@ -1,3 +1,5 @@
+//NAME AND STATEMENT OF OWN WORK MISSING
+
 package application;
 
 import java.util.ArrayList;
@@ -25,6 +27,9 @@ public class Dispenser {
 	}
 	
 	//REMOVE PRODUCT
+	//WHY DO YOU ONLY REMOVE A PRODUCT IF THE DISPENSER IS FULL?
+	//SHOULD BE ABLE TO REMOVE A PRODUCT BY REQUEST IF THE PRODUCT IS IN THE VENDING 
+	//MACHINE.
 	boolean removeProduct(Product prod) {
 		if(products.size() > CAPACITY) {
 			products.remove(prod);
@@ -34,6 +39,9 @@ public class Dispenser {
 		}
 	
 	//CHANGE PRICE 
+	//THIS IS WRONG.  YOU NEED TO LOCATE THE PRODUCT IN THE DISPENSER, THEN CHANGE ITS PRICE
+	//THIS CODE CHANGES THE PRICE OF THE ARGUMENT, WHICH WILL NOT 
+	//AFFECT THE PRODUCTS IN THE VENDING MACHINE.
 	public void changePrice(Product prod, double price) {
 			prod.price = price;
 	}
